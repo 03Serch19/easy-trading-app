@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store by Serch</title>
+  <link rel="icon" href="img/vegetal.png" type="image/x-icon">
+  <style>
+    html {
+      box-sizing: border-box;
+      font-family: sans-serif;
+      font-size: 16px;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #357044;
+      color: #201f33;
+    }
+    .frutas {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .frutas>* {
+      flex: 1 1 200px;
+      margin: 1rem;
+    }
+
+    .fruta {
+      border: 1rem;
+      border-style: inset;
+      background-color: crimson;
+      color: chartreuse;
+      font-size: 125%;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+    }
+
+    .fruta:hover {
+      opacity: .9;
+      transform: scale(.9);
+    }
+
+    .fruta img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .fruta figcaption {
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>SSSS Store</h1>
+  <section id="frutas" class="frutas"></section>
+  <template id="fruta-template">
+    <figure class="fruta">
+      <img>
+      <figcaption></figcaption>
+    </figure>
+  </template>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="assets/stripe-checkout.js" type="module"></script>
+</body>
+
+</html>
